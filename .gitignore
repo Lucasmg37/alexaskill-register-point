@@ -1,0 +1,6 @@
+node_modules/
+database/database.sqlite
+public/images/
+example1.png
+src/config/credentials.js
+database/migrations/database.sqlite
