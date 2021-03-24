@@ -4,7 +4,11 @@ const { username, password } = require('../../config/credentials')
 
 module.exports = {
   index: async (req, res) => {
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    })
+
     const page = await browser.newPage()
     await page.goto('https://app.pontomaisweb.com.br/#/acessar')
 
