@@ -18,10 +18,10 @@ module.exports = {
       })
 
       await page.focus('#login')
-      await page.keyboard.type(username)
+      await page.keyboard.type('' + username)
 
       await page.focus('#password')
-      await page.keyboard.type(password)
+      await page.keyboard.type('' + password)
 
       await page.evaluate(async () => {
         document.querySelectorAll('form button')[0].click()
@@ -31,21 +31,31 @@ module.exports = {
     const saveRegister = async () => {
       await page.evaluate(async () => {
         const button = document.querySelectorAll('button')[1]
-        const buttonText = button.innerText
+        const buttonText = button && button.innerText
 
         if (buttonText === 'Registrar ponto') {
-          button.click()
+          // button.click()
+          return true
         }
+
+        return false
       })
     }
 
-    await loginPontoMais()
+    try {
+      await loginPontoMais()
 
-    setTimeout(async () => {
-      await saveRegister()
-      await page.screenshot({ path: 'example1.png' })
-      await browser.close()
-    }, 5000)
+      setTimeout(async () => {
+        await saveRegister()
+        await page.screenshot({ path: 'example1.png' })
+        await browser.close()
+      }, 5000)
+    } catch (e) {
+      res.send({
+        status: false,
+        message: 'Error.'
+      }).status(500)
+    }
 
     res.send({
       status: true,
