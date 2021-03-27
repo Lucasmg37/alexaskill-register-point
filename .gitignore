@@ -1,6 +1,0 @@
-node_modules/
-database/database.sqlite
-public/images/
-example1.png
-database/migrations/database.sqlite
-.env
