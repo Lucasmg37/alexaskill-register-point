@@ -1,0 +1,33 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sslCertificateType": "Trusted",
+          "uri": "https://alexa-pontomais.herokuapp.com/"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "publishingInformation": {
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": [],
+      "isAvailableWorldwide": true,
+      "locales": {
+        "pt-BR": {
+          "description": "Sample Full Description",
+          "examplePhrases": [
+            "Alexa abra olá mundo",
+            "olá",
+            "ajuda"
+          ],
+          "keywords": [],
+          "name": "Ponto Mais",
+          "summary": "Sample Short Description"
+        }
+      },
+      "testingInstructions": "Sample Testing Instructions."
+    }
+  }
+}
