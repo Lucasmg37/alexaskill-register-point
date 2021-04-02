@@ -8,6 +8,10 @@ jobs:
     # machine:
     #   enabled: true
     steps:
+     - run:
+          name: Adicionando o IP do servidor ativo aos hosts conhecidos.
+          command: |
+            ssh-keyscan ec2-18-222-48-205.us-east-2.compute.amazonaws.com >> ~/.ssh/known_hosts
       - run:
           name: Deploy APP
           command: |
