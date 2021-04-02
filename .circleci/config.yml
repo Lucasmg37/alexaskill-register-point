@@ -1,14 +1,8 @@
 version: 2.1
-orbs:
-  node: circleci/node@3.0.0
 jobs:
   deploy-production:
-    machine:
-      enabled: true
     docker:
       - image: circleci/php:7.3-node-browsers
-    # machine:
-    #   enabled: true
     steps:
       - run:
           name: Adicionando o IP do servidor ativo aos hosts conhecidos.
