@@ -20,8 +20,8 @@ module.exports = () => {
   // Listen both http & https ports
   const httpServer = http.createServer(app)
   const httpsServer = https.createServer({
-    key: fs.readFileSync('./config/web_server.csr'),
-    cert: fs.readFileSync('./config/web_server_fake_PEM.key')
+    key: fs.readFileSync('./config/key.pem'),
+    cert: fs.readFileSync('./config/cert.pem')
   }, app)
 
   httpServer.listen(3334, () => {
