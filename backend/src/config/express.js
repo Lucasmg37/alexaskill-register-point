@@ -24,12 +24,12 @@ module.exports = () => {
     cert: fs.readFileSync('./config/cert.pem')
   }, app)
 
-  httpServer.listen(3334, () => {
-    console.log('HTTP Server running on port 3334')
+  httpServer.listen(3333, () => {
+    console.log('HTTP Server running on port 3333')
   })
 
-  httpsServer.listen(3333, () => {
-    console.log('HTTPS Server running on port 3333')
+  httpsServer.listen(3334, () => {
+    console.log('HTTPS Server running on port 3334')
   })
 
   return app
