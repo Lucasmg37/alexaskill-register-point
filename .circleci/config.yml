@@ -22,6 +22,7 @@ jobs:
             git pull;
             cd backend/;
             killall node;
+            npm install;
             node src/server.js > stdout.txt 2> stderr.txt &"
 workflows:
   build-and-deploy:
