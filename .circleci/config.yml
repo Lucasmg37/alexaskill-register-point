@@ -22,7 +22,8 @@ jobs:
             git pull;
             cd backend/;
             killall node;
-            node src/server.js &"
+            node src/server.js;
+            echo true;"
 workflows:
   build-and-deploy:
     jobs:
