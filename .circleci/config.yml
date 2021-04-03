@@ -22,7 +22,7 @@ jobs:
             git pull;
             cd backend/;
             killall node;
-            node src/server.js > stdout.txt 2> stderr.txt &;"
+            node src/server.js > stdout.txt 2> stderr.txt &"
 workflows:
   build-and-deploy:
     jobs:
