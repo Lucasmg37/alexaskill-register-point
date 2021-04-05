@@ -38,7 +38,7 @@ module.exports = {
         const buttonText = button && button.innerText
 
         if (buttonText === 'Registrar ponto') {
-          // button.click()
+          button.click()
           return true
         }
 
